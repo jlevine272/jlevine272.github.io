@@ -2830,7 +2830,7 @@ input, select, textarea {
 
 	#header {
 		padding: 8em 0 1em 0 ;
-		font-size: 2.5em;
+		font-size: 3em;
 	}
 
 		#header .logo {
@@ -2881,7 +2881,7 @@ input, select, textarea {
 					width: 10em;
 					height: 10em;
 					/*horiz-align: center;*/
-					margin-bottom: 100px;
+					margin-bottom: 10px;
 					border-radius: 50%; /* This makes the image round */
 					/*position: absolute; /* Position it relative to its nearest positioned ancestor or containing block */
 					/*right: 2em; /* Distance from the right side of the container */
