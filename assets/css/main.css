@@ -1804,6 +1804,7 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		font-size: 0.5em;
 	}
 
 		.icon:before {
@@ -1821,6 +1822,12 @@ input, select, textarea {
 
 		.icon > .label {
 			display: none;
+		}
+
+		.icon > .resume{
+			padding-left: 0.35em;
+			padding-right: 0.15em;
+			font-weight: 500;
 		}
 
 		.icon:before {
@@ -1843,16 +1850,18 @@ input, select, textarea {
 			background-color: transparent;
 			border: solid 1px #c9c9c9;
 			border-radius: 4px;
-			width: 2.65em;
-			height: 2.65em;
+			width: 2.5em;
+			height: 2.5em;
 			display: inline-block;
 			text-align: center;
-			line-height: 2.65em;
+			line-height: 2.5em;
 			color: inherit;
+
 		}
 
 			.icon.style2:before {
 				font-size: 1.1em;
+
 			}
 
 			.icon.style2:hover {
@@ -1873,11 +1882,12 @@ input, select, textarea {
 	border: solid 1px #c9c9c9;
 	border-radius: 4px;
 	/*width: 2.65em;*/
-	height: 2.65em;
+	height: 2.5em;
 	display: inline-block;
 	text-align: center;
-	line-height: 2.65em;
+	line-height: 2.5em;
 	color: inherit;
+	padding-left: 0.5em;
 }
 
 .icon.style3:before {
@@ -2069,15 +2079,21 @@ input, select, textarea {
 /* Icons */
 
 	ul.icons {
+		display:flex;
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
-		margin: -1em 0 2em -1em;
+		margin: -2em 0 2em 0em;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
 	}
 
 		ul.icons li {
 			display: inline-block;
-			padding: 1em 0 0 1em;
+			padding: 1em 0 0 0.5em;
+			align-items: center;
+			align-content: center;
 		}
 
 /* Form */
@@ -2898,7 +2914,7 @@ input, select, textarea {
 				color: inherit;
 				font-weight: 900;
 				letter-spacing: 0.35em;
-				margin: 0 0 2.5em 0;
+				margin: 0 0 1em 0;
 				text-decoration: none;
 				text-transform: uppercase;
 
