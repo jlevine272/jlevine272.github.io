@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+import sys
 
 def crop_image_to_aspect_ratio(image_path, output_path, aspect_ratio):
     with Image.open(image_path) as img:
@@ -23,10 +24,15 @@ def crop_image_to_aspect_ratio(image_path, output_path, aspect_ratio):
 
         cropped_img.save(output_path)
 
-def crop_images_in_directory(directory, aspect_ratio=(353, 326)):
+def crop_images_in_directory(directory, fnames=None, aspect_ratio=(353, 326)):
     valid_extensions = ('.jpg', '.jpeg', '.JPG', '.png')
 
-    for filename in os.listdir(directory):
+    if specific_files:
+        files_to_process = fnames
+    else:
+        files_to_process = [f for f in os.listdir(directory) if f.endswith(valid_extensions)]
+
+    for filename in files_to_process:
         if filename.endswith(valid_extensions):
             image_path = os.path.join(directory, filename)
             output_path = os.path.join(directory, f"{os.path.splitext(filename)[0]}_cropped{os.path.splitext(filename)[1]}")
@@ -34,6 +40,17 @@ def crop_images_in_directory(directory, aspect_ratio=(353, 326)):
             print(f"Cropped image saved to: {output_path}")
 
 # Specify your directory here
-directory = 'images'
+if __name__ == "__main__":
+    # If command line arguments are provided, use them as specific file paths
+    # The first argument is always the script name, so we skip it
+    specific_files = sys.argv[1:]
 
-crop_images_in_directory(directory)
+    # Specify your directory here
+    directory = 'images'
+
+    if specific_files:
+        # Process only the specified files
+        crop_images_in_directory(directory, fnames=specific_files)
+    else:
+        # Process the entire directory
+        crop_images_in_directory(directory)
