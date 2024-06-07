@@ -1826,7 +1826,7 @@ input, select, textarea {
 
 		.icon > .resume{
 			padding-left: 0.35em;
-			padding-right: 0.15em;
+			padding-right: 0.2em;
 			font-weight: 500;
 		}
 
@@ -2959,7 +2959,6 @@ input, select, textarea {
 				display: -webkit-flex;
 				display: -ms-flex;
 				display: flex;
-				-moz-align-items: center;
 				-webkit-align-items: center;
 				-ms-align-items: center;
 				align-items: center;
@@ -2975,7 +2974,7 @@ input, select, textarea {
 					#header nav ul li a {
 						display: block;
 						position: relative;
-						height: 3em;
+						height: 2em;
 						line-height: 3em;
 						padding: 0 1.5em;
 						background-color: rgba(255, 255, 255, 0.5);
@@ -2989,7 +2988,7 @@ input, select, textarea {
 
 					#header nav ul li a[href="#menu"] {
 						-webkit-tap-highlight-color: transparent;
-						width: 4em;
+						width: 3em;
 						text-indent: 4em;
 						font-size: 1em;
 						overflow: hidden;
