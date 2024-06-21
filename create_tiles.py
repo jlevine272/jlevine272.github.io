@@ -41,6 +41,10 @@ def crop_images_in_directory(directory, fnames=None, aspect_ratio=(353, 326)):
 
 # Specify your directory here
 if __name__ == "__main__":
+    """ Example use:
+    >>>python create_tiles.py clevr_sample.jpg
+    Cropped image saved to: images\clevr_sample_cropped.jpg
+    """
     # If command line arguments are provided, use them as specific file paths
     # The first argument is always the script name, so we skip it
     specific_files = sys.argv[1:]
