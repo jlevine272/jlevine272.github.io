@@ -2415,6 +2415,32 @@ input, select, textarea {
 
 			}
 
+
+
+.container {
+	display: flex;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.left-column .small-image {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	margin: 10px;
+}
+
+.right-column .large-image {
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+	margin: 10px;
+}
+
 /* Table */
 
 	.table-wrapper {
